@@ -5,6 +5,7 @@ import SignupForm from './_auth/forms/SignupForm';
 import './globals.css';
 import RootLayout from './_root/RootLayout';
 import AuthLayout from './_auth/AuthLayout';
+import { Toaster } from "@/components/ui/toaster"
 
 
 const App = () => {
@@ -13,13 +14,14 @@ const App = () => {
     <Routes>
       <Route element={<AuthLayout />}>
         <Route path="/sign-in" element={<SigninForm />} />
-        <Route path="/sign-in" element={<SignupForm />} />
+        <Route path="/sign-up" element={<SignupForm />} />
       </Route>
         
       <Route element={<RootLayout />}>
         <Route index element={<Home />} />
       </Route>
     </Routes>
+    <Toaster />
     </main>
   )
 }
